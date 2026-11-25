@@ -1,0 +1,79 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "h h h"
+        "n ar as1"
+        "n ar as2"
+        "f f f";
+    border-style: none;
+}
+
+
+header {
+    grid-area: h
+}
+
+nav {
+    grid-area: n
+}
+
+article {
+    grid-area: ar
+}
+
+.egyik {
+    grid-area: as1
+}
+
+.masik {
+    grid-area: as2
+}
+
+footer {
+    grid-area: f
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    list-style-type: none;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+    margin: auto;
+}
+
+nav li{
+    background-color: white;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: green;
+}
+
+nav a{
+    color: green;
+    text-decoration: none;
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+    nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "ar"
+            "as1"
+            "as2"
+            "f";
+    }
